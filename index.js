@@ -18,17 +18,24 @@ const todoListArray = [
 function render() {
   let inputString = "";
   for (let i = 0; i < todoListArray.length; i++) {
-    inputString += `<p>
-    ${todoListArray[i].name} ${todoListArray[i].date}
-    <button onclick="deleteElement()">Delete</button>
-    </p>`;
+    // console.log(todoListArray[i], i);
+    const html = `
+    <div class="name-div">${todoListArray[i].name} </div> 
+    <div class="date-div">${todoListArray[i].date} </div>
+        <button onclick="
+        deleteElement(${i})
+        "
+        class="delete-btn"
+        >Delete
+        </button>
+    `;
+    inputString += html;
   }
-
   container.innerHTML = inputString;
 }
 render();
+
 function addElement() {
-  console.log("you added value", inputDate.value);
   todoListArray.push({
     name: `${inputText.value}`,
     date: `${inputDate.value}`,
@@ -36,4 +43,10 @@ function addElement() {
 
   render();
   inputText.value = "";
+}
+
+function deleteElement(index) {
+  console.log(todoListArray[index]);
+  todoListArray.splice(index, 1);
+  render();
 }

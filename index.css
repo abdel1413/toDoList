@@ -1,4 +1,57 @@
 body {
   margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
   text-align: center;
+}
+
+.body-container {
+  margin-bottom: 40px;
+}
+.container-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin: 5px;
+  gap: 10px;
+  padding-left: 15px;
+}
+.input-text,
+.input-date {
+  padding: 5px;
+  font-size: 15px;
+}
+
+.delete-btn,
+.add-btn {
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.add-btn {
+  background: green;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: none;
+}
+
+/* .name-div {
+  margin-left: 15px;
+} */
+.date-div,
+.name-div {
+  padding-top: 10px;
+  color: blue;
+  font-size: 20px;
+}
+.delete-btn {
+  background: rgb(182, 55, 55);
+  border: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
